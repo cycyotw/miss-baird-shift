@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Miss Baird: SHIFT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="frame">
+  <div id="stage">
+    <div id="title-screen">
+      <h1 class="title">Miss Baird</h1>
+      <div class="subtitle">SHIFT</div>
+      <div class="lang-row">
+        <button data-lang="zh" lang="zh-CN">中文</button>
+        <button data-lang="en" lang="en">English</button>
+      </div>
+    </div>
+    <div id="scene" hidden>
+      <p class="placeholder"></p>
+    </div>
+  </div>
+</div>
+<!-- Load order matters: data first, then engine modules, main last. All plain globals, no build step. -->
+<script src="data/settings.js"></script>
+<script src="data/text.zh.js"></script>
+<script src="data/text.en.js"></script>
+<script src="engine/lang.js"></script>
+<script src="engine/stage.js"></script>
+<script src="engine/main.js"></script>
+</body>
+</html>
